@@ -1,0 +1,88 @@
+:root {
+  --primary: #6c63ff;
+  --secondary: #ff6584;
+  --dark: #f4e6e6;
+  --light: #f8f9fa;
+  /* Light Professional Theme */
+  --bg-primary: #f8f9fa;        /* Light gray background */
+  --bg-secondary: #e9ecef;      /* Slightly darker gray */
+  --text-primary: #212529;      /* Black text */
+  --text-secondary: #495057;    /* Dark gray text */
+  --accent-blue: #0d6efd;       /* Professional blue */
+  --accent-blue-light: #3d8bfd; /* Lighter blue */
+  --card-bg: rgba(255, 255, 255, 0.9);  /* White cards */
+  --card-border: rgba(222, 226, 230, 0.8); /* Light border */
+}
+
+/* Update Three.js background to be very subtle */
+.three-background {
+  opacity: 0.05; /* Almost invisible */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  background-image: none; /* Remove gradient */
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  overflow-x: hidden;
+  cursor: default;
+}
+
+section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--secondary);
+  border-radius: 2px;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.github-link:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+  }
+}
+
